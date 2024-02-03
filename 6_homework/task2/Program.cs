@@ -14,6 +14,10 @@ for (int i=0; i<str.Length; i++)
 {
   LowerStr=LowerStr+LowerLeters[j];
 }
+ if (str[i]==LowerLeters[j])
+{
+   LowerStr=LowerStr+LowerLeters[j];
+}
 
 }
 }
