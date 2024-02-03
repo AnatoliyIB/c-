@@ -21,3 +21,9 @@ foreach (string s in strArray)
 {
     Console.WriteLine(s);
 }
+string str2="";
+for (int j=0; j<strArray.Length; j++)
+{
+    str2=str2+strArray[j]+" ";
+}
+Console.WriteLine(str2);
