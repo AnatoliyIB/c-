@@ -10,3 +10,14 @@ foreach (string s in strArray)
 {
     Console.WriteLine(s);
 }
+
+for (int i=0; i<strArray.Length/2; i++)
+{
+    string temp=strArray[i];
+    strArray[i]=strArray[strArray.Length-1-i];
+    strArray[strArray.Length-1-i]=temp;
+}
+foreach (string s in strArray) 
+{
+    Console.WriteLine(s);
+}
