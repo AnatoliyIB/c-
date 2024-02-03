@@ -2,28 +2,38 @@
 //Сформировать строку, в которой слова расположены в обратном порядке. 
 //В полученной строке слова должны быть также разделены пробелами.
 
-Console.WriteLine("Введите строку, состоящую из слов, разделенных пробелами");
-string str = Console.ReadLine()!;
+
+
+string [] SplitstrToArray(string str)
+{
 char [] delimiter = {' '};
 string [] strArray = str.Split(delimiter,StringSplitOptions.None);
-foreach (string s in strArray) 
-{
-    Console.WriteLine(s);
+return strArray;
 }
 
+string [] ReplacestrArray (string [] strArray)
+{
 for (int i=0; i<strArray.Length/2; i++)
 {
     string temp=strArray[i];
     strArray[i]=strArray[strArray.Length-1-i];
     strArray[strArray.Length-1-i]=temp;
 }
-foreach (string s in strArray) 
-{
-    Console.WriteLine(s);
+return strArray;
 }
+
+string ConvertArrayToStr (string [] strArray)
+{
 string str2="";
 for (int j=0; j<strArray.Length; j++)
 {
     str2=str2+strArray[j]+" ";
 }
-Console.WriteLine(str2);
+return str2;
+}
+Console.WriteLine("Введите строку, состоящую из слов, разделенных пробелами");
+string str = Console.ReadLine()!;
+string [] strArray=SplitstrToArray(str);
+ReplacestrArray (strArray);
+string res=ConvertArrayToStr (strArray);
+Console.WriteLine(res);
