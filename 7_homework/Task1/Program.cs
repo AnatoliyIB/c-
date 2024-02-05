@@ -3,16 +3,12 @@
 //Использовать рекурсию, не использовать циклы
 
 void PrintNumbersBetween (int M, int N)
+{if (M==N-1)
 {
-    if (M==N-1)
-    {
-        return;
-        }
-    Console.WriteLine(M+1);
-    PrintNumbersBetween (M+1,N);
-    
-
-     
+    return;
+}
+Console.WriteLine(M+1);
+PrintNumbersBetween (M+1,N);     
 }
 
 PrintNumbersBetween(1,10);
